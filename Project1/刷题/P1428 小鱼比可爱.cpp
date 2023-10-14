@@ -1,29 +1,29 @@
-//#include <iostream>
-//using namespace std;
-//#include <vector>
-//
-////µÚÒ»ÌõÓã Îª0;
-////µÚ¶þÌõÓãÓëÇ°1Ìõ±È, µÚÈýÌõÓãÓëÇ°2Ìõ±È...... µÚnÌõÓãÓëÇ°n-1Ìõ±È
-//int main()
-//{
-//	int n; cin >> n;
-//	vector<int> v1;
-//	for (int i = 0; i < n; i++)
-//	{
-//		int temp; cin >> temp;
-//		v1.push_back(temp);
-//	}
-//	for (int i = 0; i < n; i++)
-//	{
-//		int c = 0;
-//		for (int j = 0; j < i; j++)
-//		{
-//			if (v1[j] < v1[i])
-//				c++;
-//		}
-//		cout << c << ' ';
-//	}
-//
-//
-//	return 0;
-//}
+#include <iostream>
+using namespace std;
+#include <vector>
+
+//ç¬¬ä¸€æ¡é±¼ ä¸º0;
+//ç¬¬äºŒæ¡é±¼ä¸Žå‰1æ¡æ¯”, ç¬¬ä¸‰æ¡é±¼ä¸Žå‰2æ¡æ¯”...... ç¬¬næ¡é±¼ä¸Žå‰n-1æ¡æ¯”
+int main()
+{
+	int n; cin >> n;
+	vector<int> v1;
+	for (int i = 0; i < n; i++)
+	{
+		int temp; cin >> temp;
+		v1.push_back(temp);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		int c = 0;
+		for (int j = 0; j < i; j++)
+		{
+			if (v1[j] < v1[i])
+				c++;
+		}
+		cout << c << ' ';
+	}
+
+
+	return 0;
+}
