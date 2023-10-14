@@ -1,21 +1,21 @@
-//#include <iostream> 
-//using namespace std;
-//#include <set>
-//
-//int main()
-//{
-//	int n; cin >> n;
-//	double c = 0.0;
-//	multiset<int,less<int>> s1;//ÉıĞòÅÅÁĞ
-//	for (int i = 0; i < n; i++)
-//	{
-//		int temp; cin >> temp;
-//		c += temp;
-//		s1.insert(temp);
-//	}
-//	c -= (*(s1.begin()) + *(--s1.end()));
-//	c /= (n - 2);
-//	printf("%.2lf", c);
-//
-//	return 0;
-//}//»¹¿ÉÒÔÓÃmaxº¯Êı, Ã¿´Î½øĞĞÅĞ¶ÏµÃµ½×î´óºÍ×îĞ¡Öµ
+#include <iostream> 
+using namespace std;
+#include <set>
+
+int main()
+{
+	int n; cin >> n;
+	double c = 0.0;
+	multiset<int,less<int>> s1;//å‡åºæ’åˆ—
+	for (int i = 0; i < n; i++)
+	{
+		int temp; cin >> temp;
+		c += temp;
+		s1.insert(temp);
+	}
+	c -= (*(s1.begin()) + *(--s1.end()));
+	c /= (n - 2);
+	printf("%.2lf", c);
+
+	return 0;
+}//è¿˜å¯ä»¥ç”¨maxå‡½æ•°, æ¯æ¬¡è¿›è¡Œåˆ¤æ–­å¾—åˆ°æœ€å¤§å’Œæœ€å°å€¼
