@@ -1,116 +1,57 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <iostream>
-//#include <queue>
-//using namespace std;
-////M¸öµ¥Î»,Ã¿¸öµ¥Î»Ò»¸öµ¥´ÊºÍÒëÒå, ×îÐÂµÄµ¥´Ê´æÈëÇ°,Èç¹ûµÈÓÚM, ÄÇÃ´É¾³ý×îÔçµÄµ¥´Ê
-//
-////Ã¿¸öÊý×Ö´ú±íÒ»¸öÓ¢ÎÄµ¥´Ê
-//
-////MÊÇÄÚ´æÈÝÁ¿ NÊÇÎÄÕÂ³¤¶È
-//
-////M±íÊ¾Òª×¢ÒâÉ¾³ýÇ°ÃæµÄµ¥´Ê N±íÊ¾ÒªÊäÈëµÄµ¥´Ê¸öÊý
-//
-////×îºóÊä³ö²é×ÖµäµÄ¸öÊý
-//
-////ÀýÌâÊ¹ÓÃ¹þÏ£±í
-//
-//int main()
-//{
-//	int arr[1005] = {0};//Ö±½Ó°ÑÊýµ±×÷ÏÂ±ê, ½øÐÐ±ê¼Ç,´æÔÚ±ê1, ²»´æÔÚ±ê0
-//	//Ñ¡ÔñÒ»¸öÈÝÆ÷
-//	//ÓÃÒ»¸öcount¼ÇÂ¼²é×Öµä´ÎÊý
-//	int count = 0;
-//	//ÐèÒª²éÕÒÈÝÆ÷ÖÐµÄÖµ,´æÔÚ¾Í²»ÓÃ²é×Öµä(ÒªÃ´±éÀú, ÒªÃ´²éÕÒ)
-//
-//	//ÏÈ½øÏÈ³öqueue
-//	queue<int> q1;//ÈÝÆ÷ÖÐ¼ÇÂ¼ÁËµÄÔªËØÎªÓÐµÄÔªËØ
-//	int M, N;
-//	cin >> M >> N;
-//	for (; N > 0; N--)
-//	{
-//		int temp; 
-//		cin >> temp;
-//		if (q1.empty() || arr[temp]  == 0)
-//		{
-//			if ((int)q1.size() == M)
-//			{
-//				//É¾³ýµÚÒ»¸ö
-//				arr[q1.front()] = 0;
-//				q1.pop();
-//				//ÔÚ¹þÏ£±íÉÏ°Ñ±ê¼ÇÈ¥µô
-//			}
-//		//³õÊ¼È«¶¼Îª0
-//		//Èç¹ûÎª0, ¾Í²åÈë
-//
-//		}
-//		//Èç¹ûÂúÁË
-//	if (arr[temp] == 0)
-//	{
-//		q1.push(temp);//µÚÒ»¸öÎ»ÖÃ²åÈë
-//		arr[temp] = 1;//²åÈëºóÓÐÁË, ÔÚ¹þÏ£±íÉÏ×ö±ê¼Ç, ²»ÐèÒª²é×ÖµäÁË
-//		count++;
-//	}
-//	}
-//		//Èç¹û²»Îª0, ËµÃ÷ÒÑ¾­´æÔÚ, ²»ÐèÒª²é×Öµä, ¾Í²»ÓÃ¹ÜÁË
-//				
-//	cout << count << endl;
-//	return 0;
-//}// 90·Ö
-//
-////#define _CRT_SECURE_NO_WARNINGS
-////#include <iostream>
-////#include <queue>
-////using namespace std;
-//////M¸öµ¥Î»,Ã¿¸öµ¥Î»Ò»¸öµ¥´ÊºÍÒëÒå, ×îÐÂµÄµ¥´Ê´æÈëÇ°,Èç¹ûµÈÓÚM, ÄÇÃ´É¾³ý×îÔçµÄµ¥´Ê
-////
-//////Ã¿¸öÊý×Ö´ú±íÒ»¸öÓ¢ÎÄµ¥´Ê
-////
-//////MÊÇÄÚ´æÈÝÁ¿ NÊÇÎÄÕÂ³¤¶È
-////
-//////M±íÊ¾Òª×¢ÒâÉ¾³ýÇ°ÃæµÄµ¥´Ê N±íÊ¾ÒªÊäÈëµÄµ¥´Ê¸öÊý
-////
-//////×îºóÊä³ö²é×ÖµäµÄ¸öÊý
-////
-//////ÀýÌâÊ¹ÓÃ¹þÏ£±í
-////
-////int main()
-////{
-////	int arr[1005] = { 0 };//Ö±½Ó°ÑÊýµ±×÷ÏÂ±ê, ½øÐÐ±ê¼Ç,´æÔÚ±ê1, ²»´æÔÚ±ê0
-////	//Ñ¡ÔñÒ»¸öÈÝÆ÷
-////	//ÓÃÒ»¸öcount¼ÇÂ¼²é×Öµä´ÎÊý
-////	int count = 0;
-////	//ÐèÒª²éÕÒÈÝÆ÷ÖÐµÄÖµ,´æÔÚ¾Í²»ÓÃ²é×Öµä(ÒªÃ´±éÀú, ÒªÃ´²éÕÒ)
-////
-////	//´æÔÚM = 1;
-////
-////	//ÏÈ½øÏÈ³öqueue
-////	queue<int> q1;//ÈÝÆ÷ÖÐ¼ÇÂ¼ÁËµÄÔªËØÎªÓÐµÄÔªËØ
-////	int M, N;
-////	cin >> M >> N;
-////	for (; N > 0; N--)
-////	{
-////		if (q1.size() == M)
-////		{
-////			//É¾³ýµÚÒ»¸ö
-////			arr[q1.front()] = 0;
-////			q1.pop();
-////			//ÔÚ¹þÏ£±íÉÏ°Ñ±ê¼ÇÈ¥µô
-////		}
-////		//³õÊ¼È«¶¼Îª0
-////		int temp;
-////		cin >> temp;
-////		//Èç¹ûÎª0, ¾Í²åÈë
-////		if (arr[temp] == 0)
-////		{
-////			q1.push(temp);//µÚÒ»¸öÎ»ÖÃ²åÈë
-////			arr[temp] = 1;//²åÈëºóÓÐÁË, ÔÚ¹þÏ£±íÉÏ×ö±ê¼Ç, ²»ÐèÒª²é×ÖµäÁË
-////			count++;
-////		}
-////		//Èç¹û²»Îª0, ËµÃ÷ÒÑ¾­´æÔÚ, ²»ÐèÒª²é×Öµä, ¾Í²»ÓÃ¹ÜÁË
-////		//Èç¹ûÂúÁË
-////
-////	}
-////
-////	cout << count << endl;
-////	return 0;
-////}
+#include <iostream>
+#include <queue>
+using namespace std;
+//Mä¸ªå•ä½,æ¯ä¸ªå•ä½ä¸€ä¸ªå•è¯å’Œè¯‘ä¹‰, æœ€æ–°çš„å•è¯å­˜å…¥å‰,å¦‚æžœç­‰äºŽM, é‚£ä¹ˆåˆ é™¤æœ€æ—©çš„å•è¯
+
+//æ¯ä¸ªæ•°å­—ä»£è¡¨ä¸€ä¸ªè‹±æ–‡å•è¯
+
+//Mæ˜¯å†…å­˜å®¹é‡ Næ˜¯æ–‡ç« é•¿åº¦
+
+//Mè¡¨ç¤ºè¦æ³¨æ„åˆ é™¤å‰é¢çš„å•è¯ Nè¡¨ç¤ºè¦è¾“å…¥çš„å•è¯ä¸ªæ•°
+
+//æœ€åŽè¾“å‡ºæŸ¥å­—å…¸çš„ä¸ªæ•°
+
+//ä¾‹é¢˜ä½¿ç”¨å“ˆå¸Œè¡¨
+
+int main()
+{
+	int arr[1005] = { 0 };//ç›´æŽ¥æŠŠæ•°å½“ä½œä¸‹æ ‡, è¿›è¡Œæ ‡è®°,å­˜åœ¨æ ‡1, ä¸å­˜åœ¨æ ‡0
+	//é€‰æ‹©ä¸€ä¸ªå®¹å™¨
+	//ç”¨ä¸€ä¸ªcountè®°å½•æŸ¥å­—å…¸æ¬¡æ•°
+	int count = 0;
+	//éœ€è¦æŸ¥æ‰¾å®¹å™¨ä¸­çš„å€¼,å­˜åœ¨å°±ä¸ç”¨æŸ¥å­—å…¸(è¦ä¹ˆéåŽ†, è¦ä¹ˆæŸ¥æ‰¾)
+
+	//å…ˆè¿›å…ˆå‡ºqueue
+	queue<int> q1;//å®¹å™¨ä¸­è®°å½•äº†çš„å…ƒç´ ä¸ºæœ‰çš„å…ƒç´ 
+	int M, N;
+	cin >> M >> N;
+	for (; N > 0; N--)
+	{
+		int temp;
+		cin >> temp;
+		if (q1.empty() || arr[temp] == 0)
+		{
+			if ((int)q1.size() == M)
+			{
+				//åˆ é™¤ç¬¬ä¸€ä¸ª
+				arr[q1.front()] = 0;
+				q1.pop();
+				//åœ¨å“ˆå¸Œè¡¨ä¸ŠæŠŠæ ‡è®°åŽ»æŽ‰
+			}
+			//åˆå§‹å…¨éƒ½ä¸º0
+			//å¦‚æžœä¸º0, å°±æ’å…¥
+
+		}
+		//å¦‚æžœæ»¡äº†
+		if (arr[temp] == 0)
+		{
+			q1.push(temp);//ç¬¬ä¸€ä¸ªä½ç½®æ’å…¥
+			arr[temp] = 1;//æ’å…¥åŽæœ‰äº†, åœ¨å“ˆå¸Œè¡¨ä¸Šåšæ ‡è®°, ä¸éœ€è¦æŸ¥å­—å…¸äº†
+			count++;
+		}
+	}
+	//å¦‚æžœä¸ä¸º0, è¯´æ˜Žå·²ç»å­˜åœ¨, ä¸éœ€è¦æŸ¥å­—å…¸, å°±ä¸ç”¨ç®¡äº†
+
+	cout << count << endl;
+	return 0;
+}
