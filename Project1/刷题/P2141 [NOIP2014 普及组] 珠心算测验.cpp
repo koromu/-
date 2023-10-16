@@ -1,105 +1,56 @@
-//#include <iostream>
-//#include <set>
-//using namespace std;
-//
-////¿ÉÄÜÒªÈ¥ÖØ, ËùÒÔÓÃÄÇ¸ö¶«Î÷!!
-//int main()
-//{
-//	int arr[200] = {0};
-//	int n,count = 0; cin >> n; // count Â¼ÓĞ¶àÉÙ¸öÊı
-//	set<int> s1;//¼¯ºÏÖĞµÄÊı¸÷²»ÏàÍ¬
-//	for (int i = 0; i < n; i++)
-//	{
-//		int temp; cin >> temp;
-//		s1.insert(temp);
-//	}//Éú³ÉË³ĞòÅÅÁĞµÄÊı×Ö
-//	//Ò»´ÎÈ¥Á½¸öÊı
-//	auto it1 = s1.begin();
-//	auto it4 = s1.end();
-//	auto it5 = s1.end();//it2µÄ¾¯½äÏß
-//	it4--;//it1µÄ¾¯½äÏß
-//	for (int m = 0 ; m < s1.size()-2; m++)//m¼ÇÂ¼1Ö¸ÏòµÄÎ»ÖÃ
-//	{
-//		auto it2 = it1;
-//		it2++;
-//		auto it3 = it2;
-//		it3++;
-//		for (int i = 0; i < s1.size() - 1; i++)//i¼ÇÂ¼2Ö¸ÏòµÄÎ»ÖÃ
-//		{
-//			int c = 0;
-//			c = *it1 + *it2;
-//			for (; *it3 <= c&& it3!=s1.end(); it3++)
-//			{//±éÀúµÚÁ½¸öÊıºóµÄÊı, Èç¹ûĞ¡ÓÚc¾Í¼ÌĞø±éÀú, Èç¹ûÏàµÈ»òÕß´óÓÚc¾ÍÍË³ö
-//				if (*it3 == c)
-//					if (arr[*it3] == 0)
-//					{
-//						arr[*it3] = 1;
-//						count++;
-//					}
-//				if (it3 == --s1.end())
-//					break;
-//			}
-//			it2++;
-//			if (it2 == it5)
-//				break;
-//		}
-//		it1++;
-//
-//		if (it1 == it4)
-//			break;
-//	}
-//	cout << count;
-//	return 0;
-//}
+#include <iostream>
+#include <set>
+using namespace std;
 
-//#include <iostream>
-//#include <set>
-//using namespace std;
-//
-//
-//int main()
-//{
-//	int n, count = 0; cin >> n; // count Â¼ÓĞ¶àÉÙ¸öÊı
-//	set<int> s1;//¼¯ºÏÖĞµÄÊı¸÷²»ÏàÍ¬
-//	for (int i = 0; i < n; i++)
-//	{
-//		int temp; cin >> temp;
-//		s1.insert(temp);
-//	}//Éú³ÉË³ĞòÅÅÁĞµÄÊı×Ö
-//	//Ò»´ÎÈ¥Á½¸öÊı
-//	auto it1 = s1.begin();
-//	auto it4 = s1.end();
-//	auto it5 = s1.end();//it2µÄ¾¯½äÏß
-//	it4--;//it1µÄ¾¯½äÏß
-//	for (int m = 0; m < s1.size() - 2; m++)//m¼ÇÂ¼1Ö¸ÏòµÄÎ»ÖÃ
-//	{
-//		auto it2 = it1;
-//		it2++;
-//		auto it3 = it2;
-//		it3++;
-//		for (int i = 0; i < s1.size() - 1; i++)//i¼ÇÂ¼2Ö¸ÏòµÄÎ»ÖÃ
-//		{
-//			int c = 0;
-//			c = *it1 + *it2;
-//			for (; *it3 <= c && it3 != s1.end(); it3++)
-//			{//±éÀúµÚÁ½¸öÊıºóµÄÊı, Èç¹ûĞ¡ÓÚc¾Í¼ÌĞø±éÀú, Èç¹ûÏàµÈ»òÕß´óÓÚc¾ÍÍË³ö
-//				if (*it3 == c)
-//					count++;
-//				if (it3 == --s1.end())
-//					break;
-//			}
-//			it2++;
-//			if (it2 == it5)
-//				break;
-//		}
-//		it1++;
-//
-//		if (it1 == it4)
-//			break;
-//	}
-//	cout << count;
-//	return 0;
-//}//40
+//å¯èƒ½è¦å»é‡, æ‰€ä»¥ç”¨é‚£ä¸ªä¸œè¥¿!!
+int main()
+{
+	bool arr[5000]={0};
+	int n,count = 0; cin >> n; // count å½•æœ‰å¤šå°‘ä¸ªæ•°
+	set<int> s1;//é›†åˆä¸­çš„æ•°å„ä¸ç›¸åŒ
+	for (int i = 0; i < n; i++)
+	{
+		int temp; cin >> temp;
+		s1.insert(temp);
+	}//ç”Ÿæˆé¡ºåºæ’åˆ—çš„æ•°å­—
+	//ä¸€æ¬¡å»ä¸¤ä¸ªæ•°
+	auto it1 = s1.begin();
+	auto it4 = s1.end();
+	auto it5 = s1.end();//it2çš„è­¦æˆ’çº¿
+	it4--;//it1çš„è­¦æˆ’çº¿
+	for (int m = 0 ; m < s1.size()-2; m++)//mè®°å½•1æŒ‡å‘çš„ä½ç½®
+	{
+		auto it2 = it1;
+		it2++;
+		auto it3 = it2;
+		it3++;
+		for (int i = 0; i < s1.size() - 1; i++)//iè®°å½•2æŒ‡å‘çš„ä½ç½®
+		{
+			int c = 0;
+			c = *it1 + *it2;
+			for (; *it3 <= c&& it3!=s1.end(); it3++)
+			{//éå†ç¬¬ä¸¤ä¸ªæ•°åçš„æ•°, å¦‚æœå°äºcå°±ç»§ç»­éå†, å¦‚æœç›¸ç­‰æˆ–è€…å¤§äºcå°±é€€å‡º
+				if (*it3 == c)
+					if (arr[*it3] == 0)
+					{
+						arr[*it3] = 1;
+						count++;
+					}
+				if (it3 == --s1.end())
+					break;
+			}
+			it2++;
+			if (it2 == it5)
+				break;
+		}
+		it1++;
+
+		if (it1 == it4)
+			break;
+	}
+	cout << count;
+	return 0;
+}
 
 #include <iostream>
 #include <set>
@@ -112,34 +63,34 @@ using namespace std;
 //	else
 //		return 0;
 //}
-//¿ÉÄÜÒªÈ¥ÖØ, ËùÒÔÓÃÄÇ¸ö¶«Î÷!!
+//å¯èƒ½è¦å»é‡, æ‰€ä»¥ç”¨é‚£ä¸ªä¸œè¥¿!!
 int main()
 {
 	bool arr[200] = { 0 };
-	int n, count = 0; cin >> n; // count Â¼ÓĞ¶àÉÙ¸öÊı
-	set<int> s1;//¼¯ºÏÖĞµÄÊı¸÷²»ÏàÍ¬
+	int n, count = 0; cin >> n; // count å½•æœ‰å¤šå°‘ä¸ªæ•°
+	set<int> s1;//é›†åˆä¸­çš„æ•°å„ä¸ç›¸åŒ
 	for (int i = 0; i < n; i++)
 	{
 		int temp; cin >> temp;
 		s1.insert(temp);
-	}//Éú³ÉË³ĞòÅÅÁĞµÄÊı×Ö
-	//Ò»´ÎÈ¥Á½¸öÊı
+	}//ç”Ÿæˆé¡ºåºæ’åˆ—çš„æ•°å­—
+	//ä¸€æ¬¡å»ä¸¤ä¸ªæ•°
 	auto it1 = s1.begin();
 	auto it4 = s1.end();
-	auto it5 = s1.end();//it2µÄ¾¯½äÏß
-	it4--;//it1µÄ¾¯½äÏß
-	for (int m = 0; m < s1.size() - 2; m++)//m¼ÇÂ¼1Ö¸ÏòµÄÎ»ÖÃ
+	auto it5 = s1.end();//it2çš„è­¦æˆ’çº¿
+	it4--;//it1çš„è­¦æˆ’çº¿
+	for (int m = 0; m < s1.size() - 2; m++)//mè®°å½•1æŒ‡å‘çš„ä½ç½®
 	{
 		auto it2 = it1;
 		it2++;
 		auto it3 = it2;
 		it3++;
-		for (int i = 0; i < s1.size() - 1; i++)//i¼ÇÂ¼2Ö¸ÏòµÄÎ»ÖÃ
+		for (int i = 0; i < s1.size() - 1; i++)//iè®°å½•2æŒ‡å‘çš„ä½ç½®
 		{
 			int c = 0;
 			c = *it1 + *it2;
-			//Ê¹ÓÃfind()²éÕÒ
-			if (s1.count(c))//Èç¹û´æÔÚ·µ»Ø1, ²»´æÔÚ·µ»Ø0
+			//ä½¿ç”¨count()æŸ¥æ‰¾
+			if (s1.count(c))//å¦‚æœå­˜åœ¨è¿”å›1, ä¸å­˜åœ¨è¿”å›0
 			{
 				if (arr[c] == 0)
 				{
