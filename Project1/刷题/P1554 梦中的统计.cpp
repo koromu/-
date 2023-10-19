@@ -1,25 +1,25 @@
-//#include <iostream>
-//
-//using namespace std;
-//
-//int main()
-//{
-//	int m, n; cin >> m >> n;
-//	//记录m到n中的每一位数
-//	int arr[10] = {0};//记录 0 ~ 9
-//	for (int i = m; i <= n; i++)
-//	{
-//		int temp = i;
-//		while (1)//处理此时的i
-//		{		
-//			arr[temp % 10]++;
-//			temp /= 10;
-//			if (temp == 0) break;
-//		}
-//}
-//	for (int i = 0; i < 10; i++)
-//	{
-//		cout << arr[i] << ' ';
-//	}
-//	return 0;
-//}
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int m, n; cin >> m >> n;
+	//璁板綍m鍒皀涓殑姣忎竴浣嶆暟
+	int arr[10] = {0};//璁板綍 0 ~ 9
+	for (int i = m; i <= n; i++)
+	{
+		int temp = i;
+		while (1)//澶勭悊姝ゆ椂鐨刬
+		{		
+			arr[temp % 10]++;
+			temp /= 10;
+			if (temp == 0) break;
+		}
+}
+	for (int i = 0; i < 10; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+	return 0;
+}
