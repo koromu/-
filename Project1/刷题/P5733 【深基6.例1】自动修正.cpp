@@ -1,16 +1,16 @@
-//#include <iostream>
-//#include <string>
-//using namespace std;
-//
-//int main()
-//{
-//	string s; cin >> s;
-//	for (int i = 0; i < s.size(); i++)
-//	{
-//		if (s[i] >= 'a' && s[i] <= 'z')//a - A×ó±ÕÓÒ¿ª
-//			s[i] -= 32;//²»ÓÃ±³µÄ²îÖµ
-//	}
-//	cout << s;
-//
-//	return 0;
-//}
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string s; cin >> s;
+	for (int i = 0; i < s.size(); i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')//a - Aå·¦é—­å³å¼€
+			s[i] -= 32;//ä¸ç”¨èƒŒçš„å·®å€¼
+	}
+	cout << s;
+
+	return 0;
+}
