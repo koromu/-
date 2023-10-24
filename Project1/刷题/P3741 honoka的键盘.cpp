@@ -6,9 +6,9 @@ using namespace std;
 //{
 //	int l = 0,flag=0; cin >> l;
 //	string s; cin >> s;
-//	//��ͷ��β
-//	//�������vv ����kk�ͼ�һ Ȼ���������vv��kk
-//	//˫ָ��
+//	//从头到尾
+//	//如果出现vv 或者kk就加一 然后跳过这个vv或kk
+//	//双指针
 //	int c = 0;
 //	for (int i = 0, j=1; j < l;)
 //	{
@@ -22,7 +22,7 @@ using namespace std;
 //			cout << 1;
 //			return 0;
 //		}
-//		//�ܳ��ȴ�������ʱ,ֱ���ж����������ַ���ͬ�ͼ�һ
+//		//总长度大于三个时,直接判断连续三个字符相同就加一
 //		if (s[i] == 'V' && s[j] == 'K')
 //		{
 //			c++;
@@ -53,8 +53,8 @@ int q[N], flag = 0;
 
 int main()
 {
-	//�ȿ�vk,�ٿ�vvkk,�ñ���¼�ù���v��k
-	int l = 0; cin >> l;//����
+	//先看vk,再看vvkk,用表记录用过的v和k
+	int l = 0; cin >> l;//长度
 	string s; cin >> s;
 	int c = 0;
 	for (int i = 0, j = 1; j < l;)
@@ -92,4 +92,4 @@ int main()
 	}
 	cout << c;
 	return 0;
-}
+}//差几个案例
