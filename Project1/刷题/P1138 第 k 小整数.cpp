@@ -1,44 +1,44 @@
-//#include <iostream>
-//#include <algorithm>
-//#include <set>
-//using namespace std;
-//
-////int main()
-////{
-////	int n, k; cin >> n >> k;
-////	set<int> s1;
-////	for (int i = 0; i < n; i++) 
-////	{
-////		int tmp; cin >> tmp;
-////		s1.insert(tmp); 
-////	}//¼¯ºÏÈ¥ÖØ
-////	set<int>::iterator it = s1.begin();
-////	for (int i = 1; i < k&&it!=s1.end(); i++)
-////		it++;//it´ÓµÚÒ»¸ö¿ªÊ¼, +1µÃµ½µÚ¶ş¸ö,ËùÒÔ¾àÀëµÚkĞ¡µÄÔªËØk-1²½ 
-////	//0 - k×ó±ÕÓÒ¿ªÊÇk²½
-////	//1 - k×ó±ÕÓÒ¿ªÊÇk-1²½
-////	if (it == s1.end())
-////		cout << "NO RESULT" << endl;
-////	else
-////		cout << *it;
-////	return 0;
-////}
-//
-////»¹ÓĞº¯Êı·½·¨
+#include <iostream>
+#include <algorithm>
+#include <set>
+using namespace std;
+
 //int main()
 //{
-//	int n, k,arr[10005]; cin >> n >> k;
-//	for (int i = 0; i < n; i++)
-//		cin >> arr[i];
-//	//ÏÈÅÅĞòÔÙÈ¥ÖØ
-//	//ÅÅĞò sort()
-//	sort(arr, arr + n);
-//	//È¥ÖØ unique,¾ÓÈ»ÊÇ°ÑÖØ¸´µÄÔªËØ·Åµ½Êı×éµÄ×îºóÃæ
-//	int len = unique(arr, arr + n) - arr;//·µ»Ø×îºóÒ»¸öÖ®ºóµÄÔªËØµÄµØÖ·, ÔÙ¼õÈ¥Êı×éÊ×µØÖ·, µÃµ½Î±È¥ÖØºóµÄ³¤¶È
-//	if (len >= k)
-//		cout << arr[k - 1];
+//	int n, k; cin >> n >> k;
+//	set<int> s1;
+//	for (int i = 0; i < n; i++) 
+//	{
+//		int tmp; cin >> tmp;
+//		s1.insert(tmp); 
+//	}//é›†åˆå»é‡
+//	set<int>::iterator it = s1.begin();
+//	for (int i = 1; i < k&&it!=s1.end(); i++)
+//		it++;//itä»ç¬¬ä¸€ä¸ªå¼€å§‹, +1å¾—åˆ°ç¬¬äºŒä¸ª,æ‰€ä»¥è·ç¦»ç¬¬kå°çš„å…ƒç´ k-1æ­¥ 
+//	//0 - kå·¦é—­å³å¼€æ˜¯kæ­¥
+//	//1 - kå·¦é—­å³å¼€æ˜¯k-1æ­¥
+//	if (it == s1.end())
+//		cout << "NO RESULT" << endl;
 //	else
-//		cout << "NO RESULT";
-//
+//		cout << *it;
 //	return 0;
 //}
+
+//è¿˜æœ‰å‡½æ•°æ–¹æ³•
+int main()
+{
+	int n, k,arr[10005]; cin >> n >> k;
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+	//å…ˆæ’åºå†å»é‡
+	//æ’åº sort()
+	sort(arr, arr + n);
+	//å»é‡ unique,å±…ç„¶æ˜¯æŠŠé‡å¤çš„å…ƒç´ æ”¾åˆ°æ•°ç»„çš„æœ€åé¢
+	int len = unique(arr, arr + n) - arr;//è¿”å›æœ€åä¸€ä¸ªä¹‹åçš„å…ƒç´ çš„åœ°å€, å†å‡å»æ•°ç»„é¦–åœ°å€, å¾—åˆ°ä¼ªå»é‡åçš„é•¿åº¦
+	if (len >= k)
+		cout << arr[k - 1];
+	else
+		cout << "NO RESULT";
+
+	return 0;
+}
