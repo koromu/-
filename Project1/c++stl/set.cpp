@@ -6,67 +6,67 @@
 using namespace std;
 
 //int main()
-//{
-//
-//
-//	set<int> s1; //ÉıĞòÅÅĞò
-//	set<int, greater<int>> s2;//½µĞòÅÅĞò
-//
-//	s1.insert(1);
-//	s1.insert(3);
-//	s1.insert(5);
-//	s1.insert(8);
-//	s1.insert(7);
-//	s1.insert(10);
-//
-//	s2.insert(1);
-//	s2.insert(3);
-//	s2.insert(5);
-//
-//
-//	//1. set.find(elem); //²éÕÒelemÔªËØ£¬·µ»ØÖ¸ÏòelemÔªËØµÄµü´úÆ÷
-//	set<int>::iterator it1;
-//	//µü´úÆ÷µÄÀàĞÍÊÇiterator
-//	it1 = s1.find(10);//Èç¹û²éÕÒµÄÊı²»ÔÚsetÖĞ,»á·µ»Øend()setÄ©Î²µÄµü´úÆ÷;
-//	it1--;//È·ÊµµÃµ½ÁË×îºóÒ»¸öÔªËØ
-//	cout << *it1 << endl;
-//
-//
-//	//find()·µ»ØµÄÊÇiteratorµÄ¶ÔÏó, Ãû×ÖÊÇfindº¯ÊıµÄÃû×Ö , ÀàĞÍ<T&x> ·µ»ØµÄÊÇiterator find <T&x>¶ø²»ÊÇNull
-//
-//
-//	//count()¿ÉÒÔ²éÕÒsetÈİÆ÷ÖĞµÄÔªËØµÄ¸öÊı, ¶ÔÓÚsetÀ´ËµÊÇÓĞ0 »òÕß 1
-//	//0±íÊ¾²»ÔÚ, 1±íÊ¾ÔÚ
-//
-//	//set.lower_bound(elem); ·µ»ØµÚÒ»¸ö >=elem ÔªËØµÄ µü´úÆ÷, Ïàµ±ÓÚµÃµ½Ò»¸ö·Ö½çÏßÇÒ°üÀ¨·Ö½çÏß±¾Éí
-//	//set.upper_bound(elem); // ·µ»ØµÚÒ»¸ö>elemÔªËØµÄµü´úÆ÷, ²»°üÀ¨·Ö½çÏß±¾Éí
-//	auto it2 = s1.lower_bound(5);
-//	for (; it2 != s1.end(); it2++)
-//		cout << *it2<< ' ';//5 8 7 10
-//	cout << endl;
-//
-//	auto it3 = s1.upper_bound(5);
-//	for (; it3 != s1.end(); it3++)
-//		cout << *it3 << ' ';//8 7 10
-//	cout << endl;
-//
-//
-//	//Ææ¹ÖµÄ²éÕÒº¯Êı
-//	//set.equal_range(elem), ·µ»ØÈİÆ÷ÖĞÓëelemÏàµÈµÄÉÏÏÂÏŞµÄÁ½¸öµü´úÆ÷¡£ÉÏÏŞÊÇ±ÕÇø¼ä£¬ÏÂÏŞÊÇ¿ªÇø¼ä£¬Èç[beg,end)
-//	//º¯Êı·µ»ØÁ½¸öµü´úÆ÷£¬¶øÕâÁ½¸öµü´úÆ÷±»·â×°ÔÚ pair(¶Ô) ÖĞ, Ò»¸öpairÖĞ¿ÉÒÔ´æ´¢Á½ÖÖÊı¾İ, <int,char> <int, string> <set<T>::iterator,set<T>::iterator>
-//	pair<set<int>::iterator, set<int>::iterator> p = s1.equal_range(7);
-//	cout << (*p.first) << endl;//first, ÊÇ¶ÔÓ¦Á½¸öµü´úÆ÷ÖĞµÄ ×ó±Õµü´úÆ÷beg -> lower_bound µÄ·µ»ØÖµ
-//	cout << (*p.second) << endl;//second ÊÇ¶ÔÓ¦Á½¸öµü´úÆ÷ÖĞµÄ ÓÒ¿ªµü´úÆ÷end->upper_bound µÄ·µ»ØÖµ
-//
-//
-//	pair<set<int>::iterator, set<int>::iterator> p1 = s1.equal_range(11);
-//
-//	cout << endl;
-//		set<int>::iterator it4 = p1.first;
-//		set<int>::iterator it5 = p1.second;
-//		it4--;
-//		it5--;
-//	cout << *it4 << endl; 
-//	cout << *it5 << endl;
-//	//Èç¹û´«Èë11, ÊÇ²»´æÔÚµÄÔªËØ,ÄÇÃ´¸ù¾İ±àÒëÆ÷²»Í¬,·µ»ØµÄÖµ»á²»Í¬, vs2022ÖĞÁ½¸öµü´úÆ÷¶¼ÊÇ·µ»ØsetµÄend(), Í¨¹ı'--'¿ÉÒÔµÃµ½×îºóÒ»¸öÔªËØ
-//}
+{
+
+
+	set<int> s1; //å‡åºæ’åº
+	set<int, greater<int>> s2;//é™åºæ’åº
+
+	s1.insert(1);
+	s1.insert(3);
+	s1.insert(5);
+	s1.insert(8);
+	s1.insert(7);
+	s1.insert(10);
+
+	s2.insert(1);
+	s2.insert(3);
+	s2.insert(5);
+
+
+	//1. set.find(elem); //æŸ¥æ‰¾elemå…ƒç´ ï¼Œè¿”å›æŒ‡å‘elemå…ƒç´ çš„è¿­ä»£å™¨
+	set<int>::iterator it1;
+	//è¿­ä»£å™¨çš„ç±»å‹æ˜¯iterator
+	it1 = s1.find(10);//å¦‚æœæŸ¥æ‰¾çš„æ•°ä¸åœ¨setä¸­,ä¼šè¿”å›end()setæœ«å°¾çš„è¿­ä»£å™¨;
+	it1--;//ç¡®å®å¾—åˆ°äº†æœ€åä¸€ä¸ªå…ƒç´ 
+	cout << *it1 << endl;
+
+
+	//find()è¿”å›çš„æ˜¯iteratorçš„å¯¹è±¡, åå­—æ˜¯findå‡½æ•°çš„åå­— , ç±»å‹<T&x> è¿”å›çš„æ˜¯iterator find <T&x>è€Œä¸æ˜¯Null
+
+
+	//count()å¯ä»¥æŸ¥æ‰¾setå®¹å™¨ä¸­çš„å…ƒç´ çš„ä¸ªæ•°, å¯¹äºsetæ¥è¯´æ˜¯æœ‰0 æˆ–è€… 1
+	//0è¡¨ç¤ºä¸åœ¨, 1è¡¨ç¤ºåœ¨
+
+	//set.lower_bound(elem); è¿”å›ç¬¬ä¸€ä¸ª >=elem å…ƒç´ çš„ è¿­ä»£å™¨, ç›¸å½“äºå¾—åˆ°ä¸€ä¸ªåˆ†ç•Œçº¿ä¸”åŒ…æ‹¬åˆ†ç•Œçº¿æœ¬èº«
+	//set.upper_bound(elem); // è¿”å›ç¬¬ä¸€ä¸ª>elemå…ƒç´ çš„è¿­ä»£å™¨, ä¸åŒ…æ‹¬åˆ†ç•Œçº¿æœ¬èº«
+	auto it2 = s1.lower_bound(5);
+	for (; it2 != s1.end(); it2++)
+		cout << *it2<< ' ';//5 8 7 10
+	cout << endl;
+
+	auto it3 = s1.upper_bound(5);
+	for (; it3 != s1.end(); it3++)
+		cout << *it3 << ' ';//8 7 10
+	cout << endl;
+
+
+	//å¥‡æ€ªçš„æŸ¥æ‰¾å‡½æ•°
+	//set.equal_range(elem), è¿”å›å®¹å™¨ä¸­ä¸elemç›¸ç­‰çš„ä¸Šä¸‹é™çš„ä¸¤ä¸ªè¿­ä»£å™¨ã€‚ä¸Šé™æ˜¯é—­åŒºé—´ï¼Œä¸‹é™æ˜¯å¼€åŒºé—´ï¼Œå¦‚[beg,end)
+	//å‡½æ•°è¿”å›ä¸¤ä¸ªè¿­ä»£å™¨ï¼Œè€Œè¿™ä¸¤ä¸ªè¿­ä»£å™¨è¢«å°è£…åœ¨ pair(å¯¹) ä¸­, ä¸€ä¸ªpairä¸­å¯ä»¥å­˜å‚¨ä¸¤ç§æ•°æ®, <int,char> <int, string> <set<T>::iterator,set<T>::iterator>
+	pair<set<int>::iterator, set<int>::iterator> p = s1.equal_range(7);
+	cout << (*p.first) << endl;//first, æ˜¯å¯¹åº”ä¸¤ä¸ªè¿­ä»£å™¨ä¸­çš„ å·¦é—­è¿­ä»£å™¨beg -> lower_bound çš„è¿”å›å€¼
+	cout << (*p.second) << endl;//second æ˜¯å¯¹åº”ä¸¤ä¸ªè¿­ä»£å™¨ä¸­çš„ å³å¼€è¿­ä»£å™¨end->upper_bound çš„è¿”å›å€¼
+
+
+	pair<set<int>::iterator, set<int>::iterator> p1 = s1.equal_range(11);
+
+	cout << endl;
+		set<int>::iterator it4 = p1.first;
+		set<int>::iterator it5 = p1.second;
+		it4--;
+		it5--;
+	cout << *it4 << endl; 
+	cout << *it5 << endl;
+	//å¦‚æœä¼ å…¥11, æ˜¯ä¸å­˜åœ¨çš„å…ƒç´ ,é‚£ä¹ˆæ ¹æ®ç¼–è¯‘å™¨ä¸åŒ,è¿”å›çš„å€¼ä¼šä¸åŒ, vs2022ä¸­ä¸¤ä¸ªè¿­ä»£å™¨éƒ½æ˜¯è¿”å›setçš„end(), é€šè¿‡'--'å¯ä»¥å¾—åˆ°æœ€åä¸€ä¸ªå…ƒç´ 
+}
